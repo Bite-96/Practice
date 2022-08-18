@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "jua";
+    src: url(/fonts/BMJUA_ttf.ttf);
+}
+
+#Logo{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    text-align: center;
+}
+
+#Logo > img{
+    width: 540px;
+    height: 260px;
+    display: flex;
+    margin: auto;
+    padding-top: 120px;
+}
+
+#Logo > a{
+    position: relative;
+    font-size: 150px;
+    font-family: "jua";
+    color: white;
+    bottom: -100px;
+}
