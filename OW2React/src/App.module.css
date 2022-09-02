@@ -1,0 +1,14 @@
+.bg {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color: black;
+}
+
+.bg > img {
+    width: 540px;
+    height: 260px;
+    display: flex;
+    margin: auto;
+    padding-top: 120px;
+}
