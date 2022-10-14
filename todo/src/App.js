@@ -12,7 +12,7 @@ function App() {
   const [modify, setModify] = useState("");
   const [modiError , setModiError] = useState(false);
 
-  const TODONAME = "to-do";
+  const TODONAME = "todo";
 
   useEffect(() => {
     const localItem = localStorage.getItem(TODONAME);
