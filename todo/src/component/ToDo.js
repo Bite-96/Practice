@@ -1,10 +1,15 @@
-function ToDo () {
+import React from "react";
+
+function ToDo ({onSubmit, item, onChange}) {
     return (
-        <div>
-            <form>
-                <input type="text" placeholder="Plaese Write Your To-Do..."/>   
-            </form>
-        </div>
+        <form onSubmit={onSubmit}>
+            <input 
+                type = "text" 
+                placeholder = "Plaese Write Your To-Do..."
+                value = {item}
+                onChange = {onChange}    
+            />   
+        </form>
     );
 }
 

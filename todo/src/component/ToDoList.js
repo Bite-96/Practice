@@ -1,14 +1,26 @@
-import ToDoItem from "./ToDoItem";
+import ToDoItem from './ToDoItem';
 
-function ToDoList () {
+function ToDoList({list, modify, onModify, onModifyChange, modiError, checkChange, onModifySubmit, itemDel}){
     return (
-        <div>
-            <h1>ToDoList</h1>
-            <ul>
-                <ToDoItem />
-            </ul>
-        </div>
-        
+        <ul>
+          {list.length !== 0 ? 
+            list.map((item) => 
+                <ToDoItem 
+                    item = {item} 
+                    key = {item.id}
+                    modify = {modify}
+                    onModifySubmit = {onModifySubmit} 
+                    onModifyChange = {onModifyChange}
+                    onModify = {onModify}
+                    modiError = {modiError}
+                    checkChange = {checkChange}
+                    itemDel = {itemDel}
+                />
+            ).reverse()
+            : 
+            <li>There are no registered items...</li>
+          }
+        </ul>
     );
 }
 

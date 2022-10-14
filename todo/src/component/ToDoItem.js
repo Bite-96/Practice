@@ -1,8 +1,39 @@
-function ToDoItem () {
+import Error from './Error';
+
+function ToDoItem({ item, modify , onModifySubmit, onModifyChange , onModify , modiError , checkChange , itemDel }){
+    
     return (
-        <div>
-            <li>ToDoItem</li>
-        </div>
+        <>
+           <li key={item.id} >
+                <div>
+                    {
+                    item.modify ?
+                        <>
+                            <form onSubmit={onModifySubmit}>
+                                <input type="text" 
+                                    value={modify} 
+                                    onChange={onModifyChange} 
+                                    placeholder="please press enter..."
+                                />
+                            </form>
+                            <Error text="🚫 Oops! Please, enter item" error={modiError}/>
+                        </>
+                    :
+                        <span onClick={() => checkChange(item.id)}>{item.value}</span> 
+                    }
+                    <div>
+                    {
+                        item.modify ? 
+                        <button onClick={onModifySubmit} >✍️</button>
+                        :
+                        <button onClick={()=> onModify(item.id , item.value)} >✍️</button>
+                        }
+                        <button onClick={() => itemDel(item.id)}>❌</button>
+                    </div>
+                </div>
+                
+            </li>
+        </>
     );
 }
 
