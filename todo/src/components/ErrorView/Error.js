@@ -1,10 +1,10 @@
-import React from "react";
-function ErrorView({text , error}){
+
+function Error({text , error}){
     
 
     return (
         error ? 
-        <div> 
+        <div > 
             {text}
         </div>
         : 
@@ -12,4 +12,4 @@ function ErrorView({text , error}){
     );
 }
 
-export default  ErrorView;
+export default  Error;

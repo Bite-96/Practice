@@ -1,16 +1,15 @@
-import React from 'react';
-import Error from './Error';
+import Error from '../ErrorView/Error';
 
 function ToDoItem({ item, modify , onModifySubmit, onModifyChange , onModify , modiError , checkChange , itemDel }){
     
     return (
         <>
            <li key={item.id} >
-                <div>
+                <div >
                     {
                     item.modify ?
                         <>
-                            <form onSubmit={onModifySubmit}>
+                            <form onSubmit={onModifySubmit} >
                                 <input type="text" 
                                     value={modify} 
                                     onChange={onModifyChange} 
@@ -22,7 +21,7 @@ function ToDoItem({ item, modify , onModifySubmit, onModifyChange , onModify , m
                     :
                         <span onClick={() => checkChange(item.id)}>{item.value}</span> 
                     }
-                    <div>
+                    <div >
                     {
                         item.modify ? 
                         <button onClick={onModifySubmit} >✍️</button>

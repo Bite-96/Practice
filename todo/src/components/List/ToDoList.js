@@ -4,7 +4,7 @@ import ToDoItem from './ToDoItem';
 function ToDoList({list, modify, onModify, onModifyChange, modiError, checkChange, onModifySubmit, itemDel}){
     return (
         <ul>
-          {list.length !== 0 ? 
+        {list.length !== 0 ? 
             list.map((item) => 
                 <ToDoItem 
                     item = {item} 
@@ -19,10 +19,10 @@ function ToDoList({list, modify, onModify, onModifyChange, modiError, checkChang
                 />
             ).reverse()
             : 
-            <li>There are no registered items...</li>
+            <li >There are no registered items...</li>
           }
         </ul>
     );
 }
 
-export default ToDoList;
+export default React.memo(ToDoList);

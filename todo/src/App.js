@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import DateView from './component/DateView';
-import ToDo from './component/ToDo';
-import ToDoList from './component/ToDoList';
-import Error from './component/Error'
+import React, { useState,useEffect } from "react";
+import ToDo from "./components/ToDo/ToDo";
+import DateView from "./components/DateView/DateView";
+import Error from "./components/ErrorView/Error";
+import ToDoList from "./components/List/ToDoList";
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
   const [modify, setModify] = useState("");
   const [modiError , setModiError] = useState(false);
 
-  const TODONAME = "todo";
+  const TODONAME = "to-do";
 
   useEffect(() => {
     const localItem = localStorage.getItem(TODONAME);
@@ -87,7 +87,7 @@ function App() {
       <div>
         <DateView />
         <ToDo onSubmit={onSubmit} item={item} onChange={onChange}/>
-        <Error text="🚫 Please, enter item!" error={error}/>
+        <Error text="🚫 Oops! Please, enter item" error={error}/>
         <ToDoList 
             list={list} 
             modify={modify} 
