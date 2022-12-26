@@ -19,7 +19,7 @@ function ToDoList({list, modify, onModify, onModifyChange, modiError, checkChang
                 />
             ).reverse()
             : 
-            <li >There are no registered items...</li>
+            <li >등록된 할 일이 없습니다...</li>
           }
         </ul>
     );

@@ -6,7 +6,7 @@ function ToDo({onSubmit , item , onChange  }){
         <form onSubmit={onSubmit}>
         <input 
           type = "text" 
-          placeholder = "Add item..." 
+          placeholder = "할 일을 입력하세요..." 
           value = {item}
           onChange = {onChange}
         />

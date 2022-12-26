@@ -16,7 +16,7 @@ function ToDoItem({ item, modify , onModifySubmit, onModifyChange , onModify , m
                                     placeholder="please press enter..."
                                 />
                             </form>
-                            <Error text="🚫 Oops! Please, enter item" error={modiError}/>
+                            <Error text="🚫 할 일을 입력해세요..." error={modiError}/>
                         </>
                     :
                         <span onClick={() => checkChange(item.id)}>{item.value}</span> 

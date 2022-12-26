@@ -87,7 +87,7 @@ function App() {
       <div>
         <DateView />
         <ToDo onSubmit={onSubmit} item={item} onChange={onChange}/>
-        <Error text="🚫 Oops! Please, enter item" error={error}/>
+        <Error text="🚫 아이템을 입력하세요..." error={error}/>
         <ToDoList 
             list={list} 
             modify={modify} 
